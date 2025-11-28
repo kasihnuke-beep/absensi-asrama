@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Absensi Asrama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Absensi Asrama</h2>
+
+    <form id="absenForm">
+        <label>Nama Santri</label>
+        <input type="text" id="nama" required>
+
+        <label>Kamar</label>
+        <input type="text" id="kamar" required>
+
+        <label>Status</label>
+        <select id="status" required>
+            <option value="Hadir">Hadir</option>
+            <option value="Izin">Izin</option>
+            <option value="Sakit">Sakit</option>
+            <option value="Alpha">Alpha</option>
+        </select>
+
+        <button type="submit">Simpan</button>
+    </form>
+
+    <h3>Data Absensi Hari Ini</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Kamar</th>
+                <th>Status</th>
+                <th>Waktu</th>
+            </tr>
+        </thead>
+        <tbody id="dataAbsen"></tbody>
+    </table>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
